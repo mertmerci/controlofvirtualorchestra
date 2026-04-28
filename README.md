@@ -12,7 +12,7 @@
 <sup>3</sup> IVAR Studios, Sweden &nbsp;
 <sup>4</sup> Swedish e-Science Research Centre, Sweden
 
-[comment]: Conference / Journal Name · Year
+[comment]: <> Conference / Journal Name · Year
 
 [![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b?style=flat)](https://arxiv.org/abs/XXXX.XXXXX)
 [![Dataset](https://img.shields.io/badge/Dataset-Download-blue?style=flat)](https://your-dataset-link.com)
