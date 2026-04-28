@@ -22,7 +22,6 @@ Conference / Journal Name · Year
 ---
 
 ![Teaser](assets/teaser.png)
-*Figure 1. Replace this with a caption describing your teaser figure and the key insight of your paper.*
 
 ---
 
@@ -34,17 +33,14 @@ We present a museum installation in a 180° dome theater, which gives the museum
 
 ## Video
 
-### Demo 1 — Short Descriptive Title
+### Commercial Video in the Wisdome Dome Theater in Stockholm. 
 
 > Local video file — `assets/demo1.mp4`
 
-Commercial Video in the Wisdome Dome Theater in Stockholm. 
 
-### Demo 2 — Short Descriptive Title
+### Interview of Sveriges Radio P2. 
 
 > Facebook video — embedded from https://www.facebook.com/share/r/167DfQiKNi/
-
-Interview of Sveriges Radio P2. 
 
 ---
 
