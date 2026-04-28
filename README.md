@@ -21,7 +21,7 @@ Conference / Journal Name · Year
 
 ---
 
-![Teaser](assets/teaser.pdf)
+![Teaser](assets/teaser.png)
 *Figure 1. Replace this with a caption describing your teaser figure and the key insight of your paper.*
 
 ---
@@ -36,22 +36,22 @@ We present a museum installation in a 180° dome theater, which gives the museum
 
 ### Demo 1 — Short Descriptive Title
 
-> Local video file — place your file at `assets/demo1.mp4` in the repository.
+> Local video file — `assets/demo1.mp4`
 
-Brief description of what Demo 1 shows.
+Commercial Video in the Wisdome Dome Theater in Stockholm. 
 
 ### Demo 2 — Short Descriptive Title
 
 > Facebook video — embedded from https://www.facebook.com/share/r/167DfQiKNi/
 
-Brief description of what Demo 2 shows.
+Interview of Sveriges Radio P2. 
 
 ---
 
 ## BibTeX
 
 ```bibtex
-@inproceedings{mermerci2025,
+@inproceedings{mermerci2026,
   title     = {Real Time Control of Virtual Orchestra by Recognition of Conducting Gestures},
   author    = {Mermerci, Mert and Pascoe, Emile and
                Edstr{\"o}m, Fredrik and Kjellstr{\"o}m, Hedvig},
