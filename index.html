@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Paper Title</title>
+
+  <!-- Bulma CSS — same framework used by Nerfies/Dessie -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      background: #fff;
+      color: #363636;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 1px 3px rgba(0,0,0,.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    /* Title */
+    .publication-title {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+
+    /* Authors */
+    .author-block {
+      display: inline;
+      font-size: 1.15rem;
+    }
+    .author-block a {
+      color: #3273dc;
+      text-decoration: none;
+    }
+    .author-block a:hover { text-decoration: underline; }
+
+    /* Venue tag */
+    .publication-venue {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ff6b35;
+      font-family: 'Google Sans', sans-serif;
+    }
+
+    /* Section headings */
+    .section-title {
+      font-family: 'Google Sans', sans-serif;
+      font-weight: 700;
+    }
+
+    /* Abstract */
+    .abstract-text {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #444;
+      text-align: justify;
+    }
+
+    /* Video */
+    .video-container {
+      border-radius: 8px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 4px 20px rgba(0,0,0,.18);
+    }
+    .video-container iframe,
+    .video-container video {
+      width: 100%;
+      display: block;
+    }
+    .video-placeholder {
+      background: #111;
+      color: #888;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: .8rem;
+      padding: 5rem 2rem;
+      font-size: .8rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .video-caption {
+      margin-top: .85rem;
+      font-size: .95rem;
+      color: #666;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    /* BibTeX */
+    .bibtex-wrap {
+      position: relative;
+      background: #f5f5f5;
+      border-radius: 6px;
+      padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    }
+    .bibtex-wrap pre {
+      font-family: 'Courier New', monospace;
+      font-size: .9rem;
+      line-height: 1.75;
+      background: transparent;
+      padding: 0;
+      white-space: pre-wrap;
+      color: #333;
+    }
+    .copy-btn {
+      position: absolute;
+      top: .75rem;
+      right: .75rem;
+    }
+
+    /* Teaser placeholder */
+    .teaser-placeholder {
+      background: #f0f0f0;
+      border-radius: 8px;
+      padding: 5rem 2rem;
+      text-align: center;
+      color: #aaa;
+      font-size: .85rem;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .teaser-caption {
+      margin-top: 1rem;
+      font-size: .95rem;
+      color: #666;
+      font-style: italic;
+      text-align: center;
+    }
+
+    footer.footer {
+      background: #fafafa;
+      border-top: 1px solid #eee;
+    }
+    footer .content p { font-size: .88rem; color: #888; }
+    footer a { color: #3273dc; }
+
+    @media (max-width: 768px) {
+      .publication-title { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════ NAVBAR ══════════════ -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item has-text-weight-bold" href="#">PaperName</a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div id="navMenu" class="navbar-menu">
+    <div class="navbar-start" style="flex-grow:1;justify-content:center;">
+      <a class="navbar-item" href="#abstract">Abstract</a>
+      <a class="navbar-item" href="#video">Video</a>
+      <a class="navbar-item" href="#bibtex">BibTeX</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <h1 class="title is-1 publication-title">
+            Your Full Paper Title Goes Here
+          </h1>
+
+          <div class="mt-4 mb-2">
+            <span class="author-block">
+              <a href="mailto:mermerci@kth.se">Mert Mermerci</a><sup>1</sup>,&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="mailto:emile@smash.studio">Emile Pascoe</a><sup>2</sup>,&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="mailto:fredrik@ivar.studio">Fredrik Edström</a><sup>3</sup>,&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="mailto:hedvig@kth.se">Hedvig Kjellström</a><sup>1,4</sup>
+            </span>
+          </div>
+
+          <div class="is-size-6 mt-2" style="color:#666;line-height:2;">
+            <sup>1</sup>&nbsp;KTH Royal Institute of Technology, Sweden &nbsp;&nbsp;
+            <sup>2</sup>&nbsp;SMASH Studios, Sweden &nbsp;&nbsp;
+            <sup>3</sup>&nbsp;IVAR Studios, Sweden &nbsp;&nbsp;
+            <sup>4</sup>&nbsp;Swedish e-Science Research Centre, Sweden
+          </div>
+
+          <div class="publication-venue mt-3">Conference / Journal Name · Year</div>
+
+          <!-- Buttons -->
+          <div class="mt-5">
+            <a class="button is-dark is-rounded mx-2"
+               href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank">
+              <span class="icon"><i class="fas fa-file-pdf"></i></span>
+              <span>arXiv</span>
+            </a>
+            <a class="button is-info is-rounded mx-2"
+               href="https://your-dataset-link.com" target="_blank">
+              <span class="icon"><i class="fas fa-database"></i></span>
+              <span>Dataset</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ TEASER ══════════════ -->
+<section class="hero">
+  <div class="hero-body pt-0">
+    <div class="container is-max-desktop">
+      <!--
+        Replace the placeholder below with:
+        <img src="assets/teaser.pdf" alt="Teaser" style="border-radius:8px;" />
+      -->
+      <div class="teaser-placeholder">
+        <i class="fas fa-image fa-3x mb-3" style="display:block;color:#ccc;"></i>
+        Teaser image — replace with:<br>
+        <code style="font-size:.8rem;color:#999;">&lt;img src="assets/teaser.pdf" /&gt;</code>
+      </div>
+      <p class="teaser-caption">
+        <strong>Figure 1.</strong> Replace this with a caption describing your teaser figure
+        and the key insight of your paper.
+      </p>
+    </div>
+  </div>
+</section>
+
+<hr style="border:none;border-top:1px solid #eee;margin:0;" />
+
+<!-- ══════════════ ABSTRACT ══════════════ -->
+<section class="section" id="abstract">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 section-title">Abstract</h2>
+        <div class="content">
+          <p class="abstract-text">
+            Paste your paper's abstract here. This should be an exact copy of the abstract
+            as it appears in the paper. It gives visitors a concise overview of your
+            research problem, methodology, and key findings without having to open the PDF.
+            A typical abstract is 150–250 words.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr style="border:none;border-top:1px solid #eee;margin:0;" />
+
+<!-- ══════════════ VIDEO ══════════════ -->
+<section class="section" id="video">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered mb-5">
+      <div class="column">
+        <h2 class="title is-3 section-title">Video</h2>
+      </div>
+    </div>
+
+    <!-- Demo 1 — Local video file -->
+    <h3 class="title is-4 has-text-centered mb-3">Demo 1 — Short Descriptive Title</h3>
+    <div class="video-container mb-2">
+      <!-- Local MP4: place your file at assets/demo1.mp4 in the repo -->
+      <video controls style="width:100%;">
+        <source src="assets/demo1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <p class="video-caption mb-6">
+      Brief description of what Demo 1 shows. One or two sentences explaining
+      the result being demonstrated.
+    </p>
+
+    <!-- Demo 2 — Facebook video -->
+    <h3 class="title is-4 has-text-centered mb-3">Demo 2 — Short Descriptive Title</h3>
+    <div class="video-container mb-2">
+      <!--
+        Replace YOUR_FACEBOOK_VIDEO_URL with the full URL of your Facebook video.
+        Example: https://www.facebook.com/watch/?v=1234567890
+      -->
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+        <iframe
+          src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fr%2F167DfQiKNi%2F&show_text=false&width=734"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
+          scrolling="no"
+          allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+        </iframe>
+      </div>
+    </div>
+    <p class="video-caption">
+      Brief description of what Demo 2 shows. One or two sentences explaining
+      the result being demonstrated.
+    </p>
+
+  </div>
+</section>
+
+<hr style="border:none;border-top:1px solid #eee;margin:0;" />
+
+<!-- ══════════════ BIBTEX ══════════════ -->
+<section class="section" id="bibtex">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 section-title has-text-centered">BibTeX</h2>
+        <div class="bibtex-wrap">
+          <button class="button is-small copy-btn" onclick="copyBib()">
+            <span class="icon is-small"><i class="fas fa-copy"></i></span>
+            <span id="copy-label">Copy</span>
+          </button>
+          <pre id="bib-text">@inproceedings{mermerci2025,
+  title     = {Your Full Paper Title Goes Here},
+  author    = {Mermerci, Mert and Pascoe, Emile and
+               Edstr{\"o}m, Fredrik and Kjellstr{\"o}m, Hedvig},
+  booktitle = {Proceedings of the Conference Name (CONF)},
+  year      = {2025},
+  url       = {https://arxiv.org/abs/XXXX.XXXXX}
+}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        This webpage template is adapted from
+        <a href="https://github.com/nerfies/nerfies.github.io" target="_blank">Nerfies</a>,
+        under a <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0 License</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Burger menu
+  document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector('.navbar-burger');
+    const menu   = document.getElementById('navMenu');
+    if (burger) burger.addEventListener('click', () => {
+      burger.classList.toggle('is-active');
+      menu.classList.toggle('is-active');
+    });
+  });
+
+  // Copy BibTeX
+  function copyBib() {
+    const text = document.getElementById('bib-text').innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      const lbl = document.getElementById('copy-label');
+      lbl.textContent = 'Copied!';
+      setTimeout(() => lbl.textContent = 'Copy', 2000);
+    });
+  }
+</script>
+</body>
+</html>
