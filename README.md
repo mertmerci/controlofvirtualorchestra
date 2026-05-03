@@ -14,7 +14,7 @@
 
 [comment]: <> (Conference / Journal Name · Year)
 
-[![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b?style=flat)](https://arxiv.org/abs/XXXX.XXXXX)
+[![arXiv](https://img.shields.io/badge/arXiv-2604.27957-b31b1b?style=flat)](https://arxiv.org/abs/2604.27957)
 [![Dataset](https://img.shields.io/badge/Dataset-Download-blue?style=flat)](https://your-dataset-link.com)
 
 </div>
@@ -47,13 +47,14 @@ We present a museum installation in a 180° dome theater, which gives the museum
 ## BibTeX
 
 ```bibtex
-@inproceedings{mermerci2026,
-  title     = {Real Time Control of Virtual Orchestra by Recognition of Conducting Gestures},
-  author    = {Mermerci, Mert and Pascoe, Emile and
-               Edstr{\"o}m, Fredrik and Kjellstr{\"o}m, Hedvig},
-  booktitle = {Proceedings of the Conference Name (CONF)},
-  year      = {2026},
-  url       = {https://arxiv.org/abs/XXXX.XXXXX}
+@misc{mermerci2026realtimecontrolvirtualorchestra,
+      title={Real-Time Control of a Virtual Orchestra by Recognition of Conducting Gestures}, 
+      author={Mert Mermerci and Emile Pascoe and Fredrik Edström and Hedvig Kjellström},
+      year={2026},
+      eprint={2604.27957},
+      archivePrefix={arXiv},
+      primaryClass={cs.HC},
+      url={https://arxiv.org/abs/2604.27957}, 
 }
 ```
 
