@@ -5,157 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Real Time Control of Virtual Orchestra by Recognition of Conducting Gestures</title>
 
-  <!-- Bulma CSS — same framework used by Nerfies/Dessie -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
 
   <style>
-    body {
-      font-family: 'Noto Sans', sans-serif;
-      background: #fff;
-      color: #363636;
-    }
-
-    /* Navbar */
-    .navbar {
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(6px);
-      box-shadow: 0 1px 3px rgba(0,0,0,.08);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    /* Title */
-    .publication-title {
-      font-family: 'Google Sans', sans-serif;
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.2;
-      color: #1a1a1a;
-    }
-
-    /* Authors */
-    .author-block {
-      display: inline;
-      font-size: 1.15rem;
-    }
-    .author-block a {
-      color: #3273dc;
-      text-decoration: none;
-    }
+    body { font-family: 'Noto Sans', sans-serif; background: #fff; color: #363636; }
+    .navbar { background: rgba(255,255,255,0.96); backdrop-filter: blur(6px); box-shadow: 0 1px 3px rgba(0,0,0,.08); position: sticky; top: 0; z-index: 100; }
+    .publication-title { font-family: 'Google Sans', sans-serif; font-size: 2.5rem; font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .author-block { display: inline; font-size: 1.15rem; }
+    .author-block a { color: #3273dc; text-decoration: none; }
     .author-block a:hover { text-decoration: underline; }
-
-    /* Venue tag */
-    .publication-venue {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #ff6b35;
-      font-family: 'Google Sans', sans-serif;
-    }
-
-    /* Section headings */
-    .section-title {
-      font-family: 'Google Sans', sans-serif;
-      font-weight: 700;
-    }
-
-    /* Abstract */
-    .abstract-text {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: #444;
-      text-align: justify;
-    }
-
-    /* Video */
-    .video-container {
-      border-radius: 8px;
-      overflow: hidden;
-      background: #000;
-      box-shadow: 0 4px 20px rgba(0,0,0,.18);
-    }
-    .video-container iframe,
-    .video-container video {
-      width: 100%;
-      display: block;
-    }
-    .video-placeholder {
-      background: #111;
-      color: #888;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: .8rem;
-      padding: 5rem 2rem;
-      font-size: .8rem;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      text-align: center;
-    }
-    .video-caption {
-      margin-top: .85rem;
-      font-size: .95rem;
-      color: #666;
-      text-align: center;
-      line-height: 1.6;
-    }
-
-    /* BibTeX */
-    .bibtex-wrap {
-      position: relative;
-      background: #f5f5f5;
-      border-radius: 6px;
-      padding: 1.5rem 1.5rem 1.5rem 1.5rem;
-    }
-    .bibtex-wrap pre {
-      font-family: 'Courier New', monospace;
-      font-size: .9rem;
-      line-height: 1.75;
-      background: transparent;
-      padding: 0;
-      white-space: pre-wrap;
-      color: #333;
-    }
-    .copy-btn {
-      position: absolute;
-      top: .75rem;
-      right: .75rem;
-    }
-
-    /* Teaser placeholder */
-    .teaser-placeholder {
-      background: #f0f0f0;
-      border-radius: 8px;
-      padding: 5rem 2rem;
-      text-align: center;
-      color: #aaa;
-      font-size: .85rem;
-      letter-spacing: .05em;
-      text-transform: uppercase;
-    }
-    .teaser-caption {
-      margin-top: 1rem;
-      font-size: .95rem;
-      color: #666;
-      font-style: italic;
-      text-align: center;
-    }
-
-    footer.footer {
-      background: #fafafa;
-      border-top: 1px solid #eee;
-    }
+    .publication-venue { font-size: 1.1rem; font-weight: 700; color: #ff6b35; font-family: 'Google Sans', sans-serif; }
+    .section-title { font-family: 'Google Sans', sans-serif; font-weight: 700; }
+    .abstract-text { font-size: 1.05rem; line-height: 1.8; color: #444; text-align: justify; }
+    .video-container { border-radius: 8px; overflow: hidden; background: #000; box-shadow: 0 4px 20px rgba(0,0,0,.18); }
+    .video-container iframe, .video-container video { width: 100%; display: block; }
+    .video-caption { margin-top: .85rem; font-size: .95rem; color: #666; text-align: center; line-height: 1.6; }
+    .bibtex-wrap { position: relative; background: #f5f5f5; border-radius: 6px; padding: 1.5rem; }
+    .bibtex-wrap pre { font-family: 'Courier New', monospace; font-size: .9rem; line-height: 1.75; background: transparent; padding: 0; white-space: pre-wrap; color: #333; }
+    .copy-btn { position: absolute; top: .75rem; right: .75rem; }
+    .teaser-caption { margin-top: 1rem; font-size: .95rem; color: #666; font-style: italic; text-align: center; }
+    footer.footer { background: #fafafa; border-top: 1px solid #eee; }
     footer .content p { font-size: .88rem; color: #888; }
     footer a { color: #3273dc; }
-
-    @media (max-width: 768px) {
-      .publication-title { font-size: 1.7rem; }
-    }
+    @media (max-width: 768px) { .publication-title { font-size: 1.7rem; } }
   </style>
 </head>
 <body>
@@ -212,7 +86,6 @@
 
           <div class="publication-venue mt-3">arXiv · 2026</div>
 
-          <!-- Buttons -->
           <div class="mt-5">
             <a class="button is-dark is-rounded mx-2"
                href="https://arxiv.org/abs/2604.27957" target="_blank">
@@ -236,14 +109,7 @@
 <section class="hero">
   <div class="hero-body pt-0">
     <div class="container is-max-desktop">
-      <!--
-        Replace the placeholder below with:
-        <img src="assets/teaser.png" alt="Teaser" style="border-radius:8px;" />
-      -->
       <img src="assets/teaser.png" alt="Teaser figure" style="width:100%;border-radius:8px;" />
-      <p class="teaser-caption">
-        <strong>Figure 1.</strong>A real-time gesture control interface is presented, where the user can steer the pace of a virtual symphony orchestra.
-      </p>
       <p class="teaser-caption">
         <strong>Figure 1.</strong> A real-time gesture control interface is presented, where the user can steer the pace of a virtual symphony orchestra.
       </p>
@@ -281,10 +147,9 @@
       </div>
     </div>
 
-    <!-- Demo 1 — Local video file -->
+    <!-- Video 1 — GitHub Releases -->
     <h3 class="title is-4 has-text-centered mb-3">Advertisement Video in the Wisdome Dome Theater</h3>
     <div class="video-container mb-2">
-      <!-- Local MP4: place your file at assets/demo1.mp4 in the repo -->
       <video controls style="width:100%;">
         <source src="https://github.com/mertmerci/controlofvirtualorchestra/releases/download/v1.0.0/demo1.mp4" type="video/mp4" />
         Your browser does not support the video tag.
@@ -296,7 +161,7 @@
       experiencing the installation firsthand.
     </p>
 
-    <!-- Demo 2 — Facebook video -->
+    <!-- Video 2 — Facebook -->
     <h3 class="title is-4 has-text-centered mb-3">Sveriges Radio</h3>
     <div class="video-container mb-2">
       <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
@@ -359,7 +224,6 @@
 </footer>
 
 <script>
-  // Burger menu
   document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.navbar-burger');
     const menu   = document.getElementById('navMenu');
@@ -369,7 +233,6 @@
     });
   });
 
-  // Copy BibTeX
   function copyBib() {
     const text = document.getElementById('bib-text').innerText;
     navigator.clipboard.writeText(text).then(() => {
