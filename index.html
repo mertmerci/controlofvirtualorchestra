@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Paper Title</title>
+  <title>Real Time Control of Virtual Orchestra by Recognition of Conducting Gestures</title>
 
   <!-- Bulma CSS — same framework used by Nerfies/Dessie -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
@@ -163,7 +163,7 @@
 <!-- ══════════════ NAVBAR ══════════════ -->
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item has-text-weight-bold" href="#">PaperName</a>
+    <a class="navbar-item has-text-weight-bold" href="#">VirtualOrchestra</a>
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
       <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
     </a>
@@ -185,7 +185,7 @@
         <div class="column has-text-centered">
 
           <h1 class="title is-1 publication-title">
-            Your Full Paper Title Goes Here
+            Real Time Control of Virtual Orchestra by Recognition of Conducting Gestures
           </h1>
 
           <div class="mt-4 mb-2">
@@ -210,17 +210,17 @@
             <sup>4</sup>&nbsp;Swedish e-Science Research Centre, Sweden
           </div>
 
-          <div class="publication-venue mt-3">Conference / Journal Name · Year</div>
+          <div class="publication-venue mt-3">arXiv · 2026</div>
 
           <!-- Buttons -->
           <div class="mt-5">
             <a class="button is-dark is-rounded mx-2"
-               href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank">
+               href="https://arxiv.org/abs/2604.27957" target="_blank">
               <span class="icon"><i class="fas fa-file-pdf"></i></span>
               <span>arXiv</span>
             </a>
             <a class="button is-info is-rounded mx-2"
-               href="https://your-dataset-link.com" target="_blank">
+               href="https://github.com/mertmerci/controlofvirtualorchestra/releases/download/v1.0.0/dataset.zip" target="_blank">
               <span class="icon"><i class="fas fa-database"></i></span>
               <span>Dataset</span>
             </a>
@@ -263,10 +263,7 @@
         <h2 class="title is-3 section-title">Abstract</h2>
         <div class="content">
           <p class="abstract-text">
-            Paste your paper's abstract here. This should be an exact copy of the abstract
-            as it appears in the paper. It gives visitors a concise overview of your
-            research problem, methodology, and key findings without having to open the PDF.
-            A typical abstract is 150–250 words.
+            We present a museum installation in a 180° dome theater, which gives the museum visitor the experience of conducting a symphony orchestra. We have pre-recorded a short music piece performed by a professional orchestra. This recording is played back in the dome with the visitor standing in the conductor's position. The visitor's gestures are captured with a vision-based skeleton tracker, steering the recording playback pace via a gesture recognition module that translates the gestures into a time control signal. This is sent to a playback module that plays the recording in the dome at the corresponding speed. The gesture recognition module is based on a hierarchical LSTM network, trained with recorded sequences of multiple conductors with different level of expertise conducting the same recording. The system is evaluated with a quantitative study of the estimated timing accuracy, a user study evaluating the musical realism and usability of the real-time control, and a field study to evaluate the performance of the entire system with real museum visitors.
           </p>
         </div>
       </div>
@@ -287,26 +284,23 @@
     </div>
 
     <!-- Demo 1 — Local video file -->
-    <h3 class="title is-4 has-text-centered mb-3">Demo 1 — Short Descriptive Title</h3>
+    <h3 class="title is-4 has-text-centered mb-3">Advertisement Video in the Wisdome Dome Theater</h3>
     <div class="video-container mb-2">
       <!-- Local MP4: place your file at assets/demo1.mp4 in the repo -->
       <video controls style="width:100%;">
-        <source src="assets/demo1.mp4" type="video/mp4" />
+        <source src="https://github.com/mertmerci/controlofvirtualorchestra/releases/download/v1.0.0/demo1.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
     <p class="video-caption mb-6">
-      Brief description of what Demo 1 shows. One or two sentences explaining
-      the result being demonstrated.
+      This video was produced for the premiere of the installation at Wisdome Dome Theater on September 7, 2025.
+      It showcases scenes from the preparation process, live demonstration instances, and members of the public
+      experiencing the installation firsthand.
     </p>
 
     <!-- Demo 2 — Facebook video -->
-    <h3 class="title is-4 has-text-centered mb-3">Demo 2 — Short Descriptive Title</h3>
+    <h3 class="title is-4 has-text-centered mb-3">Sveriges Radio</h3>
     <div class="video-container mb-2">
-      <!--
-        Replace YOUR_FACEBOOK_VIDEO_URL with the full URL of your Facebook video.
-        Example: https://www.facebook.com/watch/?v=1234567890
-      -->
       <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
         <iframe
           src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fr%2F167DfQiKNi%2F&show_text=false&width=734"
@@ -318,8 +312,8 @@
       </div>
     </div>
     <p class="video-caption">
-      Brief description of what Demo 2 shows. One or two sentences explaining
-      the result being demonstrated.
+      In this interview by Sveriges Radio, two audience members and chief conductor David Björkman —
+      who supported the project throughout its development phase — share their experiences with the installation.
     </p>
 
   </div>
@@ -338,13 +332,14 @@
             <span class="icon is-small"><i class="fas fa-copy"></i></span>
             <span id="copy-label">Copy</span>
           </button>
-          <pre id="bib-text">@inproceedings{mermerci2025,
-  title     = {Your Full Paper Title Goes Here},
-  author    = {Mermerci, Mert and Pascoe, Emile and
-               Edstr{\"o}m, Fredrik and Kjellstr{\"o}m, Hedvig},
-  booktitle = {Proceedings of the Conference Name (CONF)},
-  year      = {2025},
-  url       = {https://arxiv.org/abs/XXXX.XXXXX}
+          <pre id="bib-text">@misc{mermerci2026realtimecontrolvirtualorchestra,
+  title         = {Real-Time Control of a Virtual Orchestra by Recognition of Conducting Gestures},
+  author        = {Mert Mermerci and Emile Pascoe and Fredrik Edström and Hedvig Kjellström},
+  year          = {2026},
+  eprint        = {2604.27957},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.HC},
+  url           = {https://arxiv.org/abs/2604.27957}
 }</pre>
         </div>
       </div>
