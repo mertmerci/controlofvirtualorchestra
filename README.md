@@ -15,7 +15,7 @@
 [comment]: <> (Conference / Journal Name · Year)
 
 [![arXiv](https://img.shields.io/badge/arXiv-2604.27957-b31b1b?style=flat)](https://arxiv.org/abs/2604.27957)
-[![Dataset](https://img.shields.io/badge/Dataset-Download-blue?style=flat)](https://your-dataset-link.com)
+[![Dataset](https://img.shields.io/badge/Dataset-Download-blue?style=flat)](https://github.com/mertmerci/controlofvirtualorchestra/releases/download/v1.0.0/dataset.zip)
 
 </div>
 
@@ -37,7 +37,7 @@ We present a museum installation in a 180° dome theater, which gives the museum
 
 This video was produced for the premiere of the installation at Wisdome Dome Theater on September 7, 2025. It showcases scenes from the preparation process, live demonstration instances, and members of the public experiencing the installation firsthand.
 
-> Local video file — `assets/demo1.mp4`
+> Local video file — hosted on [GitHub Releases](https://github.com/mertmerci/controlofvirtualorchestra/releases/download/v1.0.0/demo1.mp4)
 
 
 ### Sveriges Radio  
