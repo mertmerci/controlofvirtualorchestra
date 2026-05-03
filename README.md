@@ -35,14 +35,14 @@ We present a museum installation in a 180° dome theater, which gives the museum
 
 ### Advertisement Video in the Wisdome Dome Theater.
 
-This video is created for the advertisement of the installation premierred in Wisdome Dome Theater on 07/09/2025. It shows scenes from both the preperation, demoing instances and public trying the installation. 
+This video was produced for the premiere of the installation at Wisdome Dome Theater on September 7, 2025. It showcases scenes from the preparation process, live demonstration instances, and members of the public experiencing the installation firsthand.
 
 > Local video file — `assets/demo1.mp4`
 
 
 ### Sveriges Radio  
 
-This is the Facebook post from Sveriges Radio. It shows an interview with a child and chief conductor David Björkman who also supported the project during the development phase. 
+In this interview by Sveriges Radio, two audience members and chief conductor David Björkman — who supported the project throughout its development phase — share their experiences with the installation.
 
 > Facebook video — embedded from https://www.facebook.com/share/r/167DfQiKNi/
 
